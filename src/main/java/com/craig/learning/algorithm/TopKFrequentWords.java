@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.catalina.security.DeployXmlPermission;
-
 public class TopKFrequentWords {
 
     class KeyWord implements Comparable<KeyWord>{

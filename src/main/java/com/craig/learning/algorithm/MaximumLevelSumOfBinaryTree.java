@@ -1,8 +1,5 @@
 package com.craig.learning.algorithm;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.craig.structure.TreeNode;
 
 public class MaximumLevelSumOfBinaryTree {
