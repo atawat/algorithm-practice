@@ -1,4 +1,4 @@
-package com.craig.learning.algorithm;
+package com.craig;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

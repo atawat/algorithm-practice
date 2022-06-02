@@ -7,8 +7,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import ch.qos.logback.core.rolling.helper.IntegerTokenConverter;
-
 public class FindAnagramsTests {
 
     FindAnagrams solution = new FindAnagrams();
