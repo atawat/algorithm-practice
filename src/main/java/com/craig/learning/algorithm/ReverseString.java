@@ -9,7 +9,7 @@ public class ReverseString {
         reverse(s, 0, s.length - 1);
     }
 
-    private void reverse(char[] s, int left, int right) {
+    public void reverse(char[] s, int left, int right) {
         while (left < right) {
             s[left] ^= s[right]; // 使用异或来进行交换,第一次异或，s[left] 代表的二进制中位数不同的map，1表示不同的bit，
             s[right] ^= s[left]; // 第二次异或map，将right中不同的位，取反，即为left的值
