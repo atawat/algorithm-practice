@@ -10,6 +10,7 @@ public class StrStr {
 
     /**
      * 暴力求解
+     * 
      * @param haystack
      * @param needle
      * @return
@@ -25,7 +26,7 @@ public class StrStr {
             }
             temp = i;
             int count = 0;
-            while (i< haystack.length() && j < needle.length() && c[i] == n[j]) {
+            while (i < haystack.length() && j < needle.length() && c[i] == n[j]) {
                 count++;
                 i++;
                 j++;
@@ -40,5 +41,51 @@ public class StrStr {
         }
 
         return temp;
+    }
+
+    /**
+     * kmp算法
+     * 
+     * @param haystack
+     * @param needle
+     * @return
+     */
+    public int strStr2(String haystack, String needle) {
+        int n = haystack.length();
+        int m = needle.length();
+        int[] next = computeNextFunction(needle);
+        int q = -1;
+        for (int i = 0; i < n; i++) {
+            while (q >= 0 && needle.charAt(q + 1) != haystack.charAt(i)) {
+                q = next[q];
+            }
+            if (needle.charAt(q + 1) == haystack.charAt(i)) {
+                q = q + 1;
+            }
+            if (q == m -1) {
+                q = next[q];
+                return i - m + 1;
+            }
+        }
+
+        return -1;
+    }
+
+    private int[] computeNextFunction(String needle) {
+        int m = needle.length();
+        int[] pi = new int[m];
+        pi[0] = -1;
+        int k = -1;
+        for (int i = 1; i < m; i++) {
+            while (k >= 0 && needle.charAt(k + 1) != needle.charAt(i)) {
+                k = pi[k];
+            }
+            if (needle.charAt(k + 1) == needle.charAt(i)) {
+                k = k + 1;
+            }
+            pi[i] = k;
+        }
+
+        return pi;
     }
 }
