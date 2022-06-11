@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class TopKFrequentWordsTests {
     @Test
-    void testTopKFrequent() {
+    void testTopKWordsFrequent() {
         TopKFrequentWords solution = new TopKFrequentWords();
         String[] source = new String[]{"i", "love", "leetcode", "i", "love", "coding"};
         String[] source2 = new String[]{"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"};
