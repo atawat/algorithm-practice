@@ -1,6 +1,5 @@
 package com.craig.learning.algorithm;
 
-import org.bouncycastle.util.Arrays;
 
 /**
  * 替换空格
