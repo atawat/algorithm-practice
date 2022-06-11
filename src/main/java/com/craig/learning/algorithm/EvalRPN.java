@@ -14,6 +14,9 @@ public class EvalRPN {
         Stack<Integer> op = new Stack<>();
 
         for (int i = 0; i < tokens.length; i++) {
+            if(tokens[i].equals("")){
+                continue;
+            }
             if (isNumber(tokens[i])) {
                 op.push(Integer.valueOf(tokens[i]));
                 continue;
