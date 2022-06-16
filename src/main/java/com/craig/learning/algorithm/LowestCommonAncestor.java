@@ -102,4 +102,25 @@ public class LowestCommonAncestor {
             return root;
         }
     }
+
+    /**
+     * BST 公共祖先
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
+    public TreeNode lowestCommonAncestorInBst(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == p || root == q) { // 递归结束条件
+            return root;
+        }
+
+        if(p.val < root.val && q.val < root.val){
+            return lowestCommonAncestor(root.left, p, q);
+        }else if(p.val > root.val && q.val > root.val){
+            return lowestCommonAncestor(root.right, p, q);
+        }else{
+            return root;
+        }
+    }
 }
