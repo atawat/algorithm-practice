@@ -1,4 +1,4 @@
-package com.craig.learning;
+package com.craig.learning.algorithm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
