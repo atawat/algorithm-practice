@@ -38,5 +38,13 @@ public class LongestCommonSubsequenceTests {
         String b ="def";
 
         assertEquals(0, solution.longestCommonSubsequence(a, b)); 
+    }    
+    
+    @Test
+    void testLongestCommonSubsequence4() {
+        String a ="HARRY";
+        String b ="SALLY";
+
+        assertEquals(2, solution.longestCommonSubsequence(a, b)); 
     }
 }
