@@ -3,6 +3,7 @@ package com.craig.structure;
 public class ListNode {
     public int val;
     public ListNode next;
+    public ListNode prev;
 
     public ListNode() {
     }
