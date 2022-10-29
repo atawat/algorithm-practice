@@ -12,10 +12,15 @@ public class IsValidTests {
     void testIsValid() {
         String s = "[]{}()";
 
-        assertTrue(solution.isValid(s)); 
-        assertTrue(solution.isValid("{[]}")); 
-        assertFalse(solution.isValid("{[])")); 
-        assertFalse(solution.isValid("{")); 
-        assertFalse(solution.isValid("{}[")); 
+        assertTrue(solution.isValid(s));
+        assertTrue(solution.isValid("{[]}"));
+        assertFalse(solution.isValid("{[])"));
+        assertFalse(solution.isValid("{"));
+        assertFalse(solution.isValid("{}["));
+    }
+    
+    @Test
+    void testIsValid1() {
+        assertFalse(solution.isValid("(])")); 
     }
 }
